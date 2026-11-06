@@ -16,35 +16,26 @@
   <text x="48" y="92" fill="#eef3ef" font-size="29" font-weight="600">Gas Atomization of Metal Powder (VOF + DPM)</text>
 
   <rect x="48" y="120" width="592" height="515" rx="16" fill="#0f1a17" stroke="#2d3f38"/>
-  <!-- chamber -->
   <path d="M206 300L150 620M434 300L490 620" stroke="#2d3f38" stroke-width="2" stroke-dasharray="6 6"/>
-  <!-- crucible -->
   <path d="M222 132H418L404 214H236Z" fill="url(#metal)" stroke="#7e948c" stroke-width="2"/>
   <path d="M236 150H404L394 206H246Z" fill="url(#melt)"/>
   <ellipse cx="320" cy="152" rx="82" ry="6" fill="#fff6c8" opacity=".7"/>
   <g fill="none" stroke="#d98b65" stroke-width="5"><path d="M214 150v8M214 172v8M214 194v8M426 150v8M426 172v8M426 194v8"/></g>
-  <!-- melt nozzle -->
   <rect x="310" y="214" width="20" height="62" fill="url(#metal)" stroke="#7e948c"/>
   <rect x="316" y="214" width="8" height="62" fill="url(#melt)"/>
-  <!-- gas die -->
   <path d="M214 250H302L308 290H226Z" fill="url(#metal)" stroke="#7e948c" stroke-width="2"/>
   <path d="M426 250H338L332 290H414Z" fill="url(#metal)" stroke="#7e948c" stroke-width="2"/>
   <path d="M250 262L300 286M390 262L340 286" stroke="#4fd1e8" stroke-width="4" stroke-linecap="round"/>
-  <!-- jets -->
-  <path d="M300 290L332 352L360 520L280 520L308 352Z" fill="url(#jet)" opacity=".0"/>
   <path d="M302 292L322 340L250 560" fill="none" stroke="#4fd1e8" stroke-width="3" stroke-dasharray="10 7" opacity=".8"/>
   <path d="M338 292L318 340L390 560" fill="none" stroke="#4fd1e8" stroke-width="3" stroke-dasharray="10 7" opacity=".8"/>
-  <!-- primary breakup (VOF) -->
   <path d="M316 276C316 300 314 318 310 338C302 354 294 360 286 376C300 372 306 362 314 352C318 368 312 384 306 396C320 386 326 370 326 352C334 362 340 372 354 378C346 362 336 352 330 338C326 318 324 300 324 276Z" fill="url(#melt)"/>
   <path d="M310 338C302 354 294 360 286 376" fill="none" stroke="#ffd166" stroke-width="6" opacity=".35" filter="url(#glow)"/>
-  <!-- secondary breakup droplets (DPM) -->
   <g>
     <g fill="#ffb347"><circle cx="282" cy="392" r="6"/><circle cx="356" cy="394" r="6"/><circle cx="300" cy="410" r="5"/><circle cx="336" cy="412" r="5.5"/><circle cx="318" cy="420" r="5"/><circle cx="270" cy="420" r="4.5"/><circle cx="366" cy="424" r="4.5"/></g>
     <g fill="#ff9d4a"><circle cx="288" cy="446" r="4"/><circle cx="350" cy="450" r="4"/><circle cx="318" cy="458" r="3.5"/><circle cx="258" cy="456" r="3.5"/><circle cx="380" cy="462" r="3.5"/><circle cx="304" cy="476" r="3"/><circle cx="336" cy="482" r="3.5"/><circle cx="240" cy="486" r="3"/><circle cx="396" cy="490" r="3"/></g>
     <g fill="#c79a7e"><circle cx="276" cy="508" r="3"/><circle cx="364" cy="512" r="3"/><circle cx="318" cy="520" r="2.6"/><circle cx="226" cy="526" r="2.6"/><circle cx="410" cy="528" r="2.6"/><circle cx="296" cy="542" r="2.4"/><circle cx="344" cy="548" r="2.6"/><circle cx="252" cy="556" r="2.2"/><circle cx="386" cy="560" r="2.4"/></g>
     <g fill="#a9b2b5"><circle cx="210" cy="580" r="2.2"/><circle cx="270" cy="586" r="2.4"/><circle cx="318" cy="590" r="2"/><circle cx="366" cy="584" r="2.4"/><circle cx="426" cy="588" r="2.2"/><circle cx="240" cy="606" r="2"/><circle cx="300" cy="610" r="2.2"/><circle cx="342" cy="606" r="2"/><circle cx="398" cy="608" r="2.2"/><circle cx="452" cy="604" r="2"/><circle cx="188" cy="604" r="2"/></g>
   </g>
-  <!-- labels -->
   <g stroke="#6d847b" stroke-width="1.5"><path d="M420 172H470"/><path d="M332 236H470"/><path d="M416 270H470"/><path d="M356 366H470"/><path d="M400 470H470"/><path d="M456 596H470"/></g>
   <text x="478" y="177" fill="#ffd98a" font-size="16">Molten metal</text>
   <text x="478" y="241" fill="#d7e3dd" font-size="16">Melt nozzle</text>
@@ -55,7 +46,6 @@
   <text x="478" y="486" fill="#93a59c" font-size="14">DPM · droplets</text>
   <text x="478" y="601" fill="#d7e3dd" font-size="16">Solid powder</text>
 
-  <!-- particle detection -->
   <rect x="664" y="120" width="488" height="250" rx="16" fill="#0f1a17" stroke="#2d3f38"/>
   <g clip-path="url(#semclip)">
     <rect x="688" y="160" width="220" height="190" fill="#2e3337"/>
@@ -72,7 +62,6 @@
     <circle cx="940" cy="324" r="4" fill="#2fc77a"/><text x="954" y="329">Satellite check</text>
   </g>
 
-  <!-- PSD -->
   <rect x="664" y="390" width="488" height="245" rx="16" fill="#0f1a17" stroke="#2d3f38"/>
   <text x="688" y="422" fill="#eef3ef" font-size="17" font-weight="600">Particle size distribution</text>
   <g fill="#5e9aff" opacity=".85">

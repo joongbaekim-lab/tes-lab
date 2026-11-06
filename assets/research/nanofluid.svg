@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Roboto, 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', Arial, sans-serif">
-  <title>Plasmonic nanofluid direct-absorption solar collector with thermal energy storage</title>
+  <title>Plasmonic nanofluid direct-absorption solar collector with localized surface plasmon resonance and thermal storage</title>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c1512"/><stop offset="1" stop-color="#132520"/></linearGradient>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#9fc3b6" stroke-opacity=".05"/></pattern>
@@ -27,7 +27,6 @@
     <path d="M200 200L262 326"/><path d="M262 188L324 326"/><path d="M324 176L386 326"/><path d="M386 176L448 326"/><path d="M448 176L510 326"/><path d="M510 176L572 326"/>
   </g>
 
-  <!-- piping loop -->
   <path d="M700 370H726V446H648V474" fill="none" stroke="#e8743a" stroke-width="8" stroke-linejoin="round"/>
   <path d="M590 590H82V370H110" fill="none" stroke="#2a5fb8" stroke-width="8" stroke-linejoin="round"/>
   <circle cx="300" cy="590" r="18" fill="#1b2a26" stroke="#5e9aff" stroke-width="3"/>
@@ -37,7 +36,6 @@
   <text x="66" y="482" fill="#8fb8ff" font-size="14">cold</text>
   <text x="716" y="466" fill="#ffb38a" font-size="14" text-anchor="end">hot</text>
 
-  <!-- tube -->
   <rect x="112" y="332" width="586" height="76" rx="38" fill="url(#fluid)"/>
   <g clip-path="url(#tube)">
     <g fill="#ffd166" opacity=".55" filter="url(#glow)">
@@ -51,12 +49,10 @@
   <text x="405" y="446" fill="#eef3ef" font-size="17" font-weight="600" text-anchor="middle">Plasmonic nanofluid</text>
   <text x="405" y="470" fill="#93a59c" font-size="14" text-anchor="middle">volumetric absorption of sunlight</text>
 
-  <!-- TES tank -->
   <rect x="590" y="474" width="116" height="140" rx="22" fill="url(#tank)" stroke="#c4d3cc" stroke-opacity=".5" stroke-width="2"/>
   <text x="648" y="526" fill="#ffffff" font-size="15" font-weight="700" text-anchor="middle">TES</text>
   <text x="648" y="546" fill="#ffffff" font-size="13" text-anchor="middle">storage tank</text>
 
-  <!-- zoom: LSPR -->
   <path d="M560 360L772 250" stroke="#d98b65" stroke-width="1.5" stroke-dasharray="4 5" opacity=".7"/>
   <circle cx="560" cy="360" r="11" fill="none" stroke="#d98b65" stroke-width="2"/>
   <rect x="772" y="120" width="380" height="250" rx="16" fill="#0f1a17" stroke="#2d3f38"/>
@@ -72,7 +68,6 @@
   <text x="1018" y="286" fill="#93a59c" font-size="14">tunable peak</text>
   <text x="796" y="350" fill="#93a59c" font-size="14">collective electron oscillation → strong absorption → heat</text>
 
-  <!-- spectrum -->
   <rect x="772" y="390" width="380" height="245" rx="16" fill="#0f1a17" stroke="#2d3f38"/>
   <text x="796" y="420" fill="#eef3ef" font-size="17" font-weight="600">Solar absorption</text>
   <path d="M810 590C820 520 835 455 850 460C880 470 920 540 1000 565C1060 580 1100 586 1130 588L1130 590Z" fill="#ffd166" opacity=".25"/>

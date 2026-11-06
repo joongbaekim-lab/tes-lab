@@ -16,7 +16,6 @@
   <text x="48" y="56" fill="#d98b65" font-size="15" font-weight="700" letter-spacing="3">02-A · ECO-FRIENDLY &amp; RENEWABLE ENERGY</text>
   <text x="48" y="92" fill="#eef3ef" font-size="29" font-weight="600">Passive Daytime Radiative Cooling (PDRC)</text>
 
-  <!-- scene -->
   <g clip-path="url(#scene)">
     <rect x="48" y="120" width="660" height="515" fill="url(#sky)"/>
     <g fill="#ffffff"><circle cx="300" cy="160" r="1.6"/><circle cx="420" cy="140" r="1.2"/><circle cx="470" cy="190" r="1.5"/><circle cx="380" cy="205" r="1"/><circle cx="250" cy="200" r="1.2"/><circle cx="520" cy="150" r="1"/><circle cx="690" cy="200" r="1.3"/><circle cx="350" cy="232" r="1"/></g>
@@ -31,16 +30,14 @@
   <circle cx="140" cy="212" r="56" fill="#ffd166" opacity=".35" filter="url(#glow)"/>
   <circle cx="140" cy="212" r="34" fill="url(#sun)"/>
 
-  <!-- building -->
   <rect x="250" y="455" width="400" height="145" fill="url(#bld)" stroke="#2f433c"/>
   <g fill="#2c4a52" opacity=".9"><rect x="276" y="566" width="40" height="22" rx="2"/><rect x="336" y="566" width="40" height="22" rx="2"/><rect x="524" y="566" width="40" height="22" rx="2"/><rect x="584" y="566" width="40" height="22" rx="2"/></g>
   <rect x="420" y="560" width="60" height="40" rx="2" fill="#2a3a35"/>
   <rect x="238" y="439" width="424" height="16" rx="3" fill="#f1f7f6"/>
   <g fill="#c7dbe0"><circle cx="262" cy="447" r="3"/><circle cx="300" cy="445" r="2.5"/><circle cx="342" cy="448" r="3"/><circle cx="388" cy="445" r="2.5"/><circle cx="430" cy="448" r="3"/><circle cx="474" cy="445" r="2.5"/><circle cx="516" cy="448" r="3"/><circle cx="560" cy="445" r="2.5"/><circle cx="604" cy="448" r="3"/><circle cx="640" cy="446" r="2.5"/></g>
   <text x="450" y="500" fill="#eef3ef" font-size="18" font-weight="600" text-anchor="middle">T<tspan font-size="13" dy="4">surface</tspan><tspan dy="-4"> &lt; T</tspan><tspan font-size="13" dy="4">ambient</tspan></text>
-  <text x="450" y="530" fill="#93a59c" font-size="15" text-anchor="middle">sub-ambient cooling · 냉방 부하 저감</text>
+  <text x="450" y="530" fill="#93a59c" font-size="15" text-anchor="middle">sub-ambient cooling · cooling load reduction</text>
 
-  <!-- solar in / reflected -->
   <g fill="none" stroke="#ffd166" stroke-width="3" marker-end="url(#ay)">
     <path d="M165 238L330 434"/><path d="M180 226L392 434"/>
   </g>
@@ -49,7 +46,6 @@
   </g>
   <text x="452" y="322" fill="#ffd98a" font-size="16" font-weight="600" text-anchor="middle">Solar reflection</text>
 
-  <!-- IR emission -->
   <g fill="none" stroke="url(#irup)" stroke-width="3" stroke-linecap="round">
     <path d="M560 432c-9-14 9-24 0-38s9-24 0-38s9-24 0-38s9-24 0-38s9-24 0-38s9-24 0-38s6-14 0-24"/>
     <path d="M605 432c-9-14 9-24 0-38s9-24 0-38s9-24 0-38s9-24 0-38s9-24 0-38s9-24 0-38s6-14 0-24"/>
@@ -58,7 +54,6 @@
   <g fill="#4fd1e8"><polygon points="551,186 560,168 569,186"/><polygon points="596,186 605,168 614,186"/><polygon points="641,186 650,168 659,186"/></g>
   <text x="690" y="152" fill="#8fe3ee" font-size="16" font-weight="600" text-anchor="end">IR emission → space</text>
 
-  <!-- spectrum -->
   <rect x="740" y="120" width="412" height="320" rx="16" fill="#0f1a17" stroke="#2d3f38"/>
   <text x="764" y="152" fill="#eef3ef" font-size="17" font-weight="600">Spectral design of the coating</text>
   <rect x="1042" y="175" width="38" height="185" fill="#4fd1e8" opacity=".18"/>
@@ -72,7 +67,6 @@
   <rect x="896" y="416" width="14" height="12" fill="#4fd1e8" opacity=".5"/><text x="916" y="427" fill="#c4d3cc" font-size="13">Atm. window</text>
   <path d="M1012 422h20" stroke="#2fc77a" stroke-width="3.5"/><text x="1038" y="427" fill="#c4d3cc" font-size="13">Emissivity ε</text>
 
-  <!-- cross-section -->
   <rect x="740" y="460" width="412" height="175" rx="16" fill="#0f1a17" stroke="#2d3f38"/>
   <text x="764" y="491" fill="#eef3ef" font-size="17" font-weight="600">Dual-layer radiative cooling paint</text>
   <rect x="764" y="506" width="364" height="38" fill="#dfeceb"/>
@@ -83,5 +77,5 @@
   <text x="776" y="530" fill="#1c2b27" font-size="14" font-weight="600">Top · IR-emissive layer</text>
   <text x="776" y="568" fill="#1c2b27" font-size="14" font-weight="600">Bottom · solar-reflective (TiO₂)</text>
   <text x="776" y="596" fill="#eef3ef" font-size="12">Substrate</text>
-  <text x="764" y="622" fill="#93a59c" font-size="14">Spray coating · scalable &amp; durable</text>
+  <text x="764" y="622" fill="#93a59c" font-size="14">Spray coating · scalable and durable</text>
 </svg>
