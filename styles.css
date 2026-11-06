@@ -1160,3 +1160,9 @@ html.lang-en .research-jump a { white-space: normal; align-items: flex-start; }
 .course-hero > p.course-en { display: block; margin: 22px 0 0; }
 
 .course-hero > p.course-en { color: var(--muted); font-size: clamp(18px, 1.8vw, 24px); font-weight: 700; }
+
+/* mobile menu: scroll inside the open menu (header is sticky) */
+@media (max-width: 1200px) {
+  .site-nav.is-open { max-height: calc(100vh - 76px); max-height: calc(100dvh - 76px); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; padding-bottom: 28px; box-shadow: 0 18px 30px rgba(21, 32, 27, .10); }
+  .menu-toggle { white-space: nowrap; flex-shrink: 0; }
+}
