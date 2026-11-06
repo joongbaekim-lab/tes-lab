@@ -9,14 +9,6 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <script>try { if (sessionStorage.getItem("tes-splash-seen")) document.documentElement.classList.add("splash-seen"); else document.documentElement.classList.add("splash-lock"); } catch (e) { document.documentElement.classList.add("splash-lock"); }</script>
-  <noscript><style>.splash { display: none !important; } html.splash-lock, html.splash-lock body { overflow: auto !important; }</style></noscript>
-  <div class="splash" id="splash" aria-label="TES Lab. 시작 화면">
-    <div class="splash-glow" aria-hidden="true"></div>
-    <img class="splash-logo" src="assets/tes-lab-logo-dark.png" alt="TES Thermal Energy Solution Lab." width="1600" height="611">
-    <p class="splash-sub">Kongju National University · Department of Mechanical and Automotive Engineering</p>
-    <button class="splash-enter" type="button" aria-label="사이트로 들어가기"><span class="splash-enter-text">Scroll or tap to enter</span><span class="splash-chevron" aria-hidden="true"></span></button>
-  </div>
   <a class="skip-link" href="#main">본문 바로가기</a>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="TES Lab 홈">
@@ -28,17 +20,14 @@
   <main id="main">
     <section class="hero">
       <div class="hero-copy">
-        <h1><span class="lab-red">Thermal</span> <span class="lab-green">Energy</span><br><span class="lab-blue">Solutions</span></h1>
+        <h1>Thermal Energy Solutions Lab.</h1>
         <p class="hero-lead">열에너지의 이해와 응용으로 지속 가능한 에너지와 첨단 제조의 해법을 연구합니다.</p>
-        <p class="hero-note">Thermal Energy Solutions Laboratory<br>Department of Mechanical and Automotive Engineering · Kongju National University</p>
+        <p class="hero-note">Department of Mechanical and Automotive Engineering · Kongju National University</p>
         <div class="button-row">
           <a class="button button-dark" href="research.html">연구 분야 보기 <span aria-hidden="true">↗</span></a>
           <a class="text-link" href="contact.html">연구실 문의 <span aria-hidden="true">→</span></a>
         </div>
         <a class="recruit-badge" href="contact.html"><span class="recruit-dot" aria-hidden="true"></span>Recruiting · 학부연구생 및 대학원생 상시 모집</a>
-      </div>
-      <div class="hero-art">
-        <div class="hero-visual-glow" aria-hidden="true"></div>
       </div>
       <div class="hero-index"><span>01</span><span>RESEARCH / ENERGY / ENGINEERING</span></div>
     </section>

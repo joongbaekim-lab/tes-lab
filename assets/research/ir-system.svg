@@ -1,29 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Roboto, 'Noto Sans KR', 'Malgun Gothic', Arial, sans-serif">
-  <title>Pulsed and lock-in thermography for semiconductor package crack inspection using surface temperature nonuniformity</title>
+  <title>Pulsed and lock-in infrared thermography system for semiconductor package inspection</title>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c1512"/><stop offset="1" stop-color="#132520"/></linearGradient>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#9fc3b6" stroke-opacity=".05"/></pattern>
     <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a5c56"/><stop offset="1" stop-color="#26322e"/></linearGradient>
-    <linearGradient id="emc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#394554"/><stop offset="1" stop-color="#181f2c"/></linearGradient>
+    <linearGradient id="emc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a4146"/><stop offset="1" stop-color="#1c2124"/></linearGradient>
     <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd166" stop-opacity=".45"/><stop offset="1" stop-color="#ffd166" stop-opacity=".04"/></linearGradient>
-    <linearGradient id="tempgrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1c6fbf"/><stop offset=".28" stop-color="#56d0d1"/><stop offset=".5" stop-color="#f6d76a"/><stop offset=".72" stop-color="#f79c5c"/><stop offset="1" stop-color="#d84d4d"/></linearGradient>
-    <linearGradient id="hot" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2f7df6"/><stop offset="1" stop-color="#f14b4b"/></linearGradient>
-    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="8"/></filter>
+    <linearGradient id="ir" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff5a4f"/><stop offset="1" stop-color="#ffb347" stop-opacity=".35"/></linearGradient>
+    <linearGradient id="inferno" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#000004"/><stop offset=".2" stop-color="#320a5e"/><stop offset=".4" stop-color="#781c6d"/><stop offset=".6" stop-color="#bc3754"/><stop offset=".78" stop-color="#ed6925"/><stop offset=".9" stop-color="#fbb61a"/><stop offset="1" stop-color="#fcffa4"/></linearGradient>
+    <radialGradient id="tbg" cx=".5" cy=".5" r=".75"><stop offset="0" stop-color="#3b0f63"/><stop offset="1" stop-color="#12062b"/></radialGradient>
+    <radialGradient id="tpkg" cx=".5" cy=".5" r=".7"><stop offset="0" stop-color="#bc3754"/><stop offset=".55" stop-color="#8a226a"/><stop offset="1" stop-color="#4a1270"/></radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="7"/></filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.5"/></filter>
+    <clipPath id="screen"><rect x="785" y="170" width="300" height="225" rx="6"/></clipPath>
     <marker id="arr" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ffb347"/></marker>
     <marker id="arrc" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#4fd1e8"/></marker>
-    <clipPath id="screen"><rect x="785" y="170" width="300" height="225" rx="6"/></clipPath>
   </defs>
   <rect width="1200" height="675" fill="url(#bg)"/><rect width="1200" height="675" fill="url(#grid)"/>
 
   <text x="48" y="56" fill="#d98b65" font-size="15" font-weight="700" letter-spacing="3">01-A · INFRARED THERMOGRAPHY</text>
-  <text x="48" y="92" fill="#eef3ef" font-size="29" font-weight="600">Pulse and Lock-in Thermography for Semiconductor Packages</text>
+  <text x="48" y="92" fill="#eef3ef" font-size="29" font-weight="600">Pulsed &amp; Lock-in Thermography for Semiconductor Packages</text>
 
+  <!-- excitation beams -->
   <polygon points="218,293 140,347 320,398 455,398" fill="url(#beam)"/>
   <polygon points="522,293 600,347 420,398 285,398" fill="url(#beam)"/>
 
+  <!-- wiring -->
   <path d="M60 595H40V345H128" fill="none" stroke="#3d524b" stroke-width="2.5" stroke-dasharray="6 5"/>
   <path d="M440 595H650V345H612" fill="none" stroke="#3d524b" stroke-width="2.5" stroke-dasharray="6 5"/>
 
+  <!-- lamps -->
   <g transform="translate(165 300) rotate(-35)">
     <rect x="-55" y="-26" width="110" height="52" rx="9" fill="url(#metal)" stroke="#62786f"/>
     <rect x="-44" y="16" width="88" height="12" rx="5" fill="#ffd166" filter="url(#glow)"/>
@@ -37,10 +43,11 @@
     <path d="M-38 -12h76M-38 -2h76" stroke="#2a3833" stroke-width="3" stroke-linecap="round"/>
   </g>
   <text x="150" y="212" fill="#ffd98a" font-size="17" font-weight="600" text-anchor="middle">Flash lamp</text>
-  <text x="150" y="233" fill="#93a59c" font-size="14" text-anchor="middle">Pulse heating</text>
+  <text x="150" y="233" fill="#93a59c" font-size="14" text-anchor="middle">Pulsed heating</text>
   <text x="590" y="212" fill="#ffd98a" font-size="17" font-weight="600" text-anchor="middle">Halogen lamp</text>
-  <text x="590" y="233" fill="#93a59c" font-size="14" text-anchor="middle">Lock-in heating</text>
+  <text x="590" y="233" fill="#93a59c" font-size="14" text-anchor="middle">Lock-in (sine) heating</text>
 
+  <!-- IR camera -->
   <rect x="290" y="128" width="160" height="102" rx="14" fill="url(#metal)" stroke="#6b8279"/>
   <path d="M306 146h40M306 156h40M306 166h40" stroke="#1d2825" stroke-width="3" stroke-linecap="round"/>
   <circle cx="425" cy="148" r="5" fill="#2fc77a"/>
@@ -50,19 +57,21 @@
   <text x="276" y="166" fill="#eef3ef" font-size="18" font-weight="600" text-anchor="end">IR Camera</text>
   <text x="276" y="188" fill="#93a59c" font-size="14" text-anchor="end">MWIR · 3–5 μm</text>
 
-  <g fill="none" stroke="#ffb347" stroke-width="3" stroke-linecap="round" marker-end="url(#arr)">
-    <path d="M370 392c-9-13 9-21 0-34s9-21 0-34s9-21 0-34s7-14 0-20"/>
-    <path d="M340 392c-9-13 6-21-2-34s8-21 1-34s9-21 4-34s8-12 10-20"/>
-    <path d="M400 392c9-13-6-21 2-34s-8-21-1-34s-9-21-4-34s-8-12-10-20"/>
+  <!-- emitted IR -->
+  <g fill="none" stroke="url(#ir)" stroke-width="3" stroke-linecap="round">
+    <path d="M370 392c-9-13 9-21 0-34s9-21 0-34s9-21 0-34s7-14 0-20" marker-end="url(#arr)"/>
+    <path d="M340 392c-9-13 6-21-2-34s8-21 1-34s9-21 4-34s8-12 10-20" marker-end="url(#arr)"/>
+    <path d="M400 392c9-13-6-21 2-34s-8-21-1-34s-9-21-4-34s-8-12-10-20" marker-end="url(#arr)"/>
   </g>
 
+  <!-- sample -->
   <rect x="250" y="492" width="240" height="40" rx="4" fill="#1b2522" stroke="#2d3f38"/>
   <rect x="220" y="470" width="300" height="22" rx="4" fill="#2f3f39" stroke="#4a5d56"/>
   <g fill="#cfd7d4"><circle cx="284" cy="462" r="7"/><circle cx="306" cy="462" r="7"/><circle cx="328" cy="462" r="7"/><circle cx="350" cy="462" r="7"/><circle cx="372" cy="462" r="7"/><circle cx="394" cy="462" r="7"/><circle cx="416" cy="462" r="7"/><circle cx="438" cy="462" r="7"/><circle cx="460" cy="462" r="7"/></g>
-  <rect x="268" y="440" width="204" height="15" rx="2" fill="#127b62" stroke="#77d2b2" stroke-opacity=".6"/>
+  <rect x="268" y="440" width="204" height="15" rx="2" fill="#1d6b47" stroke="#2fc77a" stroke-opacity=".6"/>
   <rect x="290" y="398" width="160" height="42" rx="3" fill="url(#emc)" stroke="#59646a"/>
-  <rect x="330" y="418" width="80" height="17" rx="2" fill="#1d2a35" opacity=".9" stroke="#bfd0d8" stroke-dasharray="4 3"/>
-  <path d="M352 398l7 9-5 8 8 8-4 9" fill="none" stroke="#ff5a4f" stroke-width="7" opacity=".5" filter="url(#glow)"/>
+  <rect x="330" y="418" width="80" height="17" rx="2" fill="#6b7a80" opacity=".55" stroke="#9aa7ab" stroke-dasharray="4 3"/>
+  <path d="M352 398l7 9-5 8 8 8-4 9" fill="none" stroke="#ff5a4f" stroke-width="7" opacity=".5" filter="url(#soft)"/>
   <path d="M352 398l7 9-5 8 8 8-4 9" fill="none" stroke="#ff7a6e" stroke-width="2.5" stroke-linejoin="round"/>
   <g stroke="#6d847b" stroke-width="1.5"><path d="M452 406H542"/><path d="M474 448H542"/><path d="M468 466H542"/></g>
   <text x="550" y="411" fill="#d7e3dd" font-size="16">EMC · crack</text>
@@ -70,6 +79,7 @@
   <text x="550" y="473" fill="#d7e3dd" font-size="16">Solder ball</text>
   <text x="370" y="520" fill="#93a59c" font-size="14" text-anchor="middle">XY stage</text>
 
+  <!-- control -->
   <rect x="60" y="555" width="380" height="82" rx="12" fill="#15211d" stroke="#2d3f38"/>
   <text x="82" y="584" fill="#eef3ef" font-size="17" font-weight="600">Excitation control</text>
   <path d="M82 618h28v-20h12v20h34" fill="none" stroke="#ffd166" stroke-width="2.5"/>
@@ -77,32 +87,36 @@
   <path d="M232 609q12-17 24 0t24 0t24 0t24 0" fill="none" stroke="#ffd166" stroke-width="2.5"/>
   <text x="338" y="622" fill="#93a59c" font-size="14">Lock-in f</text>
 
+  <!-- data link -->
   <path d="M450 180H752" fill="none" stroke="#4fd1e8" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#arrc)"/>
   <text x="606" y="168" fill="#93a59c" font-size="14" text-anchor="middle">thermal image sequence</text>
 
+  <!-- monitor -->
   <rect x="760" y="120" width="400" height="300" rx="16" fill="#0f1a17" stroke="#2d3f38"/>
-  <text x="785" y="153" fill="#eef3ef" font-size="17" font-weight="600">Surface-temperature contour</text>
+  <text x="785" y="153" fill="#eef3ef" font-size="17" font-weight="600">Phase image · defect contrast</text>
   <g clip-path="url(#screen)">
-    <rect x="785" y="170" width="300" height="225" fill="#12062b"/>
-    <rect x="828" y="203" width="214" height="154" rx="5" fill="url(#tempgrad)" opacity=".8"/>
-    <path d="M862 240 C895 255 928 255 969 235 S1004 212 1046 220" fill="none" stroke="#f4ead7" stroke-width="6" opacity=".7"/>
-    <path d="M860 222L975 222" stroke="#f5f9fd" stroke-width="2" stroke-dasharray="7 7" opacity=".7"/>
-    <rect x="893" y="212" width="66" height="136" fill="none" stroke="#d9e7f9" stroke-width="2.5" stroke-dasharray="7 4" opacity=".85"/>
-    <rect x="893" y="212" width="66" height="22" fill="#dfe7f0" opacity=".25"/>
-    <text x="926" y="228" fill="#e7f2ff" font-size="13" font-weight="800" text-anchor="middle">CRACK</text>
-    <path d="M920 256L930 270L944 258L960 290L975 260" fill="none" stroke="#ffffff" stroke-width="3.5" opacity=".9"/>
+    <rect x="785" y="170" width="300" height="225" fill="url(#tbg)"/>
+    <rect x="828" y="203" width="214" height="154" rx="5" fill="url(#tpkg)"/>
+    <ellipse cx="926" cy="282" rx="30" ry="66" fill="#ed6925" opacity=".6" filter="url(#glow)"/>
+    <path d="M914 204l15 31-10 25 18 31-8 32" fill="none" stroke="#fcffa4" stroke-width="9" opacity=".6" filter="url(#soft)"/>
+    <path d="M914 204l15 31-10 25 18 31-8 32" fill="none" stroke="#fbb61a" stroke-width="3" stroke-linejoin="round"/>
+    <rect x="893" y="212" width="66" height="136" fill="none" stroke="#2fc77a" stroke-width="2.5" stroke-dasharray="7 4"/>
+    <rect x="893" y="212" width="66" height="22" fill="#2fc77a"/>
+    <text x="926" y="228" fill="#06210f" font-size="13" font-weight="800" text-anchor="middle">CRACK</text>
   </g>
-  <rect x="1100" y="170" width="16" height="225" rx="3" fill="url(#hot)"/>
+  <rect x="1100" y="170" width="16" height="225" rx="3" fill="url(#inferno)"/>
   <text x="1124" y="182" fill="#c4d3cc" font-size="13">High</text>
   <text x="1124" y="394" fill="#c4d3cc" font-size="13">Low</text>
 
+  <!-- response chart -->
   <rect x="760" y="440" width="400" height="197" rx="16" fill="#0f1a17" stroke="#2d3f38"/>
-  <text x="785" y="471" fill="#eef3ef" font-size="17" font-weight="600">Temperature response at defect and sound area</text>
+  <text x="785" y="471" fill="#eef3ef" font-size="17" font-weight="600">Surface temperature response</text>
   <path d="M800 490V610H1138" fill="none" stroke="#4a5d56" stroke-width="2"/>
   <text x="792" y="500" fill="#93a59c" font-size="13" text-anchor="end">ΔT</text>
-  <text x="1138" y="628" fill="#93a59c" font-size="13" text-anchor="end">time</text>
+  <text x="1138" y="628" fill="#93a59c" font-size="13" text-anchor="end">time after pulse</text>
   <path d="M804 610C810 505 828 520 868 556S980 600 1132 604" fill="none" stroke="#5e9aff" stroke-width="3"/>
   <path d="M804 610C810 498 834 500 880 530S1000 572 1132 586" fill="none" stroke="#ff5a4f" stroke-width="3"/>
+
   <path d="M1000 500h26" stroke="#ff5a4f" stroke-width="3"/><text x="1034" y="505" fill="#d7e3dd" font-size="14">Defect</text>
   <path d="M1000 524h26" stroke="#5e9aff" stroke-width="3"/><text x="1034" y="529" fill="#d7e3dd" font-size="14">Sound area</text>
 </svg>
