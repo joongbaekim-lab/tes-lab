@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Roboto, 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', Arial, sans-serif">
+  <title>Metal hydride hydrogen storage reactor with copper thermal path lattice and bed temperature evolution</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c1512"/><stop offset="1" stop-color="#132520"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#9fc3b6" stroke-opacity=".05"/></pattern>
+    <linearGradient id="bed" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#396fc4"/><stop offset=".32" stop-color="#48b8b2"/><stop offset=".55" stop-color="#f3d064"/><stop offset=".78" stop-color="#f28d4c"/><stop offset="1" stop-color="#d94748"/></linearGradient>
+    <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#396fc4"/><stop offset=".32" stop-color="#48b8b2"/><stop offset=".55" stop-color="#f3d064"/><stop offset=".78" stop-color="#f28d4c"/><stop offset="1" stop-color="#d94748"/></linearGradient>
+    <linearGradient id="cu" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd39b"/><stop offset=".45" stop-color="#cd7748"/><stop offset="1" stop-color="#8d4836"/></linearGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#64756f"/><stop offset=".15" stop-color="#27332f"/><stop offset=".85" stop-color="#27332f"/><stop offset="1" stop-color="#64756f"/></linearGradient>
+    <marker id="blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#69baff"/></marker>
+    <marker id="orange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ff9f6e"/></marker>
+    <clipPath id="reactor"><rect x="95" y="235" width="488" height="274" rx="12"/></clipPath>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/><rect width="1200" height="675" fill="url(#grid)"/>
+  <text x="48" y="56" fill="#d98b65" font-size="15" font-weight="700" letter-spacing="3">03-C · MULTIPHYSICS SIMULATION FOR SMART MANUFACTURING</text>
+  <text x="48" y="92" fill="#eef3ef" font-size="29" font-weight="600">Thermal Management in Metal Hydride Hydrogen Storage</text>
+
+  <rect x="48" y="120" width="580" height="515" rx="16" fill="#0f1a17" stroke="#2d3f38"/>
+  <text x="72" y="153" fill="#eef3ef" font-size="17" font-weight="600">Hydride reactor · absorption mode</text>
+  <rect x="92" y="232" width="494" height="280" rx="16" fill="url(#wall)" stroke="#93a59c" stroke-width="2"/>
+  <g clip-path="url(#reactor)">
+    <rect x="95" y="235" width="488" height="274" fill="url(#bed)" opacity=".8"/>
+    <g fill="#d7e3dd" opacity=".32">
+      <circle cx="128" cy="280" r="3"/><circle cx="157" cy="310" r="3"/><circle cx="194" cy="275" r="3"/><circle cx="228" cy="340" r="3"/><circle cx="270" cy="285" r="3"/><circle cx="304" cy="365" r="3"/><circle cx="346" cy="300" r="3"/><circle cx="386" cy="340" r="3"/><circle cx="430" cy="282" r="3"/><circle cx="467" cy="355" r="3"/><circle cx="522" cy="304" r="3"/><circle cx="552" cy="400" r="3"/><circle cx="140" cy="425" r="3"/><circle cx="190" cy="455" r="3"/><circle cx="245" cy="410" r="3"/><circle cx="335" cy="450" r="3"/><circle cx="405" cy="418" r="3"/><circle cx="480" cy="464" r="3"/><circle cx="535" cy="440" r="3"/>
+    </g>
+    <g fill="none" stroke="url(#cu)" stroke-width="13" stroke-linejoin="round" opacity=".98">
+      <path d="M144 257V485H214V257H284V485H354V257H424V485H494V257H557"/>
+      <path d="M112 325H567M112 415H567" stroke-width="9"/>
+    </g>
+    <g fill="none" stroke="#ffe0b7" stroke-width="1.5" opacity=".8">
+      <path d="M144 257V485H214V257H284V485H354V257H424V485H494V257H557"/>
+      <path d="M112 325H567M112 415H567"/>
+    </g>
+  </g>
+  <rect x="92" y="232" width="494" height="280" rx="16" fill="none" stroke="#a8b8b2" stroke-width="2"/>
+  <rect x="70" y="349" width="23" height="46" rx="5" fill="#5273a0" stroke="#a8b8b2"/>
+  <path d="M48 372H72" stroke="#69baff" stroke-width="4" marker-end="url(#blue)"/>
+  <text x="72" y="542" fill="#8fc2ff" font-size="15" font-weight="600">H₂ inlet · absorption</text>
+  <text x="72" y="565" fill="#93a59c" font-size="14">Hydrogen reacts with metal alloy</text>
+  <g stroke="#6d847b" stroke-width="1.5"><path d="M430 254L526 196"/><path d="M500 394L526 424"/><path d="M560 480L526 518"/></g>
+  <text x="535" y="190" fill="#ffbd83" font-size="14" text-anchor="end">Copper thermal-path lattice</text>
+  <text x="535" y="443" fill="#eef3ef" font-size="14" text-anchor="end">Metal hydride bed</text>
+  <text x="535" y="537" fill="#d7e3dd" font-size="14" text-anchor="end">Insulated reactor wall</text>
+  <rect x="592" y="260" width="14" height="212" rx="3" fill="url(#bar)"/>
+  <text x="584" y="272" fill="#c4d3cc" font-size="12" text-anchor="end">Hot</text>
+  <text x="584" y="476" fill="#c4d3cc" font-size="12" text-anchor="end">Cool</text>
+  <text x="72" y="606" fill="#93a59c" font-size="14">Copper lattice improves heat spreading during exothermic absorption</text>
+
+  <rect x="652" y="120" width="500" height="300" rx="16" fill="#0f1a17" stroke="#2d3f38"/>
+  <text x="676" y="153" fill="#eef3ef" font-size="17" font-weight="600">Bed temperature field during absorption</text>
+  <rect x="690" y="190" width="396" height="154" rx="8" fill="url(#bed)" stroke="#93a59c" stroke-opacity=".5"/>
+  <g stroke="#c77a4f" stroke-width="8" opacity=".9"><path d="M728 204V330M788 204V330M848 204V330M908 204V330M968 204V330M1028 204V330"/></g>
+  <g stroke="#ffe0b7" stroke-width="1.2" opacity=".8"><path d="M728 204V330M788 204V330M848 204V330M908 204V330M968 204V330M1028 204V330"/></g>
+  <g fill="none" stroke="#f2eadc" stroke-width="1.5" opacity=".45"><path d="M698 232C778 208 852 260 924 235S1032 208 1078 230"/><path d="M698 275C786 250 856 300 928 274S1034 250 1078 276"/><path d="M698 315C780 290 858 335 926 314S1030 290 1078 314"/></g>
+  <text x="690" y="371" fill="#93a59c" font-size="13">Axial position →</text>
+  <text x="1086" y="371" fill="#93a59c" font-size="13" text-anchor="end">Thermal contours</text>
+  <text x="676" y="400" fill="#c4d3cc" font-size="14">Exothermic heat release creates local hot zones; copper pathways reduce gradients.</text>
+
+  <rect x="652" y="440" width="500" height="195" rx="16" fill="#0f1a17" stroke="#2d3f38"/>
+  <text x="676" y="473" fill="#eef3ef" font-size="17" font-weight="600">Temperature evolution in the hydride bed</text>
+  <path d="M702 500V594H1118" fill="none" stroke="#4a5d56" stroke-width="2"/>
+  <text x="692" y="508" fill="#93a59c" font-size="13" text-anchor="end">T</text>
+  <text x="1118" y="614" fill="#93a59c" font-size="13" text-anchor="end">Time</text>
+  <path d="M706 580C734 545 752 508 786 506C825 504 834 556 878 560C918 563 944 526 982 530C1020 532 1040 572 1114 576" fill="none" stroke="#ff9f6e" stroke-width="3"/>
+  <path d="M706 580C740 558 768 540 800 542C842 544 860 566 900 568C946 570 968 546 1004 548C1048 550 1070 574 1114 580" fill="none" stroke="#4fd1e8" stroke-width="3"/>
+  <path d="M930 495h22" stroke="#ff9f6e" stroke-width="3"/><text x="960" y="500" fill="#d7e3dd" font-size="13">Without lattice</text>
+  <path d="M1030 495h22" stroke="#4fd1e8" stroke-width="3"/><text x="1060" y="500" fill="#d7e3dd" font-size="13">With lattice</text>
+</svg>
