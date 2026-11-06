@@ -1,0 +1,9 @@
+# Claude 작업용 파일 (사이트에 불필요)
+432e21b7-*/
+*.jsonl
+memory/
+업로드/
+[요청]*.txt
+desktop.ini
+Thumbs.db
+*.bat

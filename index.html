@@ -6,21 +6,32 @@
   <meta name="description" content="국립공주대학교 열에너지솔루션 연구실 TES Lab.">
   <title>TES Lab. | Thermal Energy Solutions Laboratory</title>
   <link rel="stylesheet" href="styles.css"><link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"><link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png"><link rel="apple-touch-icon" href="assets/favicon-180.png">
-  <script src="script.js" defer></script>
+  <script src="assets/i18n-en.js" defer></script><script src="script.js" defer></script>
 </head>
 <body>
+  <script>try { if (sessionStorage.getItem("tes-splash-seen")) document.documentElement.classList.add("splash-seen"); else document.documentElement.classList.add("splash-lock"); } catch (e) { document.documentElement.classList.add("splash-lock"); }</script>
+  <noscript><style>.splash { display: none !important; } html.splash-lock, html.splash-lock body { overflow: auto !important; }</style></noscript>
+  <div class="splash" id="splash" aria-label="TES Lab. 시작 화면">
+    <div class="splash-glow" aria-hidden="true"></div>
+    <span class="splash-watermark" aria-hidden="true">TES</span>
+    <img class="splash-logo" src="assets/tes-lab-logo.png" alt="TES Thermal Energy Solution Lab." width="1600" height="587">
+    <p class="splash-sub">Kongju National University · Department of Mechanical and Automotive Engineering</p>
+    <button class="splash-enter" type="button" aria-label="사이트로 들어가기"><span class="splash-enter-text">Scroll or tap to enter</span><span class="splash-chevron" aria-hidden="true"></span></button>
+  </div>
   <a class="skip-link" href="#main">본문 바로가기</a>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="TES Lab 홈">
       <img class="brand-mark" src="assets/knu-seal-128.png" alt="Kongju National University" width="46" height="46"><span class="brand-name">TES Lab.<small>Thermal Energy Solutions Lab.</small></span>
     </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">메뉴</button>
-    <nav id="site-nav" class="site-nav" aria-label="Main menu"><a aria-current="page" href="index.html">Home</a><a href="about.html">About</a><a href="research.html">Research</a><a href="team.html">People</a><a href="publications.html">Publications</a><a href="open-courses.html">Open Courses</a><a href="news.html">News</a><a href="lectures.html">Lectures</a><a href="contact.html">Contact</a></nav>
+    <nav id="site-nav" class="site-nav" aria-label="Main menu"><a aria-current="page" href="index.html">Home</a><a href="about.html">About</a><a href="research.html">Research</a><a href="team.html">People</a><div class="nav-item has-sub"><a href="achievements.html">Achievements</a><div class="nav-sub"><a href="publications.html">Publications</a><a href="conferences.html">Conferences</a><a href="patents.html">Patents</a></div></div><a href="open-courses.html">Open Courses</a><a href="news.html">News</a><a href="lectures.html">Lectures</a><a href="contact.html">Contact</a></nav>
   </header>
   <main id="main">
     <section class="hero">
+      <span class="hero-watermark" aria-hidden="true">TES</span>
       <div class="hero-copy">
-        <h1>Thermal Energy Solutions Lab.</h1>
+        <img class="hero-logo" src="assets/tes-lab-logo.png" alt="TES Thermal Energy Solution Lab. 연구실 로고" width="1600" height="587">
+        <h1><span class="lab-red">Thermal</span> <span class="lab-green">Energy</span> <span class="lab-blue">Solutions</span> Lab.</h1>
         <p class="hero-lead">열에너지의 이해와 응용으로 지속 가능한 에너지와 첨단 제조의 해법을 연구합니다.</p>
         <p class="hero-note">Department of Mechanical and Automotive Engineering · Kongju National University</p>
         <div class="button-row">
@@ -29,7 +40,7 @@
         </div>
         <a class="recruit-badge" href="contact.html"><span class="recruit-dot" aria-hidden="true"></span>Recruiting · 학부연구생 및 대학원생 상시 모집</a>
       </div>
-      <div class="hero-index"><span>01</span><span>RESEARCH / ENERGY / ENGINEERING</span></div>
+      <div class="hero-index"><span>SINCE 2022</span><span>RESEARCH / ENERGY / ENGINEERING</span></div>
     </section>
 
     <section class="intro section-wrap">
@@ -43,43 +54,33 @@
 
     <section class="section-wrap research-preview">
       <div class="section-heading">
-        <div><p class="eyebrow">WHAT WE STUDY</p><h2>Research Areas</h2></div>
+        <div><div class="section-kicker"><span>02</span><span>WHAT WE STUDY</span></div><h2>Research Areas</h2></div>
         <a class="arrow-link" href="research.html">전체 연구 보기 <span aria-hidden="true">↗</span></a>
       </div>
       <div class="research-grid">
-        <a class="research-card" href="research.html#thermography"><img class="research-thumb" src="assets/research/ir-system.svg" alt="" loading="lazy"><span class="card-no">01 / MEASUREMENT</span><h3>적외선 열화상 기반<br>검사 및 계측</h3><span class="card-arrow">↗</span></a>
-        <a class="research-card" href="research.html#energy"><img class="research-thumb" src="assets/research/pdrc.svg" alt="" loading="lazy"><span class="card-no">02 / ENERGY</span><h3>친환경·신재생 에너지<br>생산·저장</h3><span class="card-arrow">↗</span></a>
-        <a class="research-card" href="research.html#manufacturing"><img class="research-thumb" src="assets/research/heatsink.svg" alt="" loading="lazy"><span class="card-no">03 / ENGINEERING</span><h3>다중물리 해석 기반<br>스마트 제조 설계</h3><span class="card-arrow">↗</span></a>
+        <a class="research-card" href="research.html#thermography"><img class="research-thumb" src="assets/research/original/ir-1.png" alt="" loading="lazy"><span class="card-no">01 / MEASUREMENT</span><h3>적외선 열화상 기반<br>검사 및 계측</h3><span class="card-arrow">↗</span></a>
+        <a class="research-card" href="research.html#energy"><img class="research-thumb" src="assets/research/original/en-1.png" alt="" loading="lazy"><span class="card-no">02 / ENERGY</span><h3>친환경·신재생 에너지<br>생산·저장</h3><span class="card-arrow">↗</span></a>
+        <a class="research-card" href="research.html#manufacturing"><img class="research-thumb" src="assets/research/original/mp-2.png" alt="" loading="lazy"><span class="card-no">03 / ENGINEERING</span><h3>다중물리 해석 기반<br>스마트 제조 설계</h3><span class="card-arrow">↗</span></a>
       </div>
     </section>
 
     <section class="news-band">
       <div class="section-wrap">
         <div class="section-heading">
-          <div><p class="eyebrow">LATEST UPDATES</p><h2>Lab News</h2></div>
+          <div><div class="section-kicker"><span>03</span><span>LATEST UPDATES</span></div><h2>Lab News</h2></div>
           <a class="arrow-link" href="news.html">소식 더 보기 <span aria-hidden="true">↗</span></a>
         </div>
-        <a class="news-feature" href="news.html">
-          <span class="news-date">09 / 2026</span>
-          <span class="news-title">과기정통부 2026년도 2차 개인기초연구 핵심연구 기본연구B 선정</span>
-          <span class="news-arrow" aria-hidden="true">↗</span>
-        </a>
-        <a class="news-feature" href="news.html">
-          <span class="news-date">08 / 2026</span>
-          <span class="news-title">석사과정 김대희, 한국연구재단 연구장려금지원사업 선정</span>
-          <span class="news-arrow" aria-hidden="true">↗</span>
-        </a>
-        <a class="news-feature" href="news.html">
-          <span class="news-date">04 / 2026</span>
-          <span class="news-title">지역에너지혁신연구센터 선정</span>
-          <span class="news-arrow" aria-hidden="true">↗</span>
-        </a>
+        <div class="home-news-grid">
+          <a class="home-news-card" href="news.html#y2026"><img src="assets/news/001_2026-09-14.jpg" alt="" loading="lazy"><span class="news-date">2026.09.14</span><span class="news-title">과기정통부 2026년도 2차 개인기초연구 핵심연구 기본연구B 선정</span></a>
+          <a class="home-news-card" href="news.html#y2026"><img src="assets/news/002_2026-08-31.jpg" alt="" loading="lazy"><span class="news-date">2026.08.31</span><span class="news-title">석사과정 김대희, 한국연구재단 석사과정생 연구장려금지원사업 선정</span></a>
+          <a class="home-news-card" href="news.html#y2026"><img src="assets/news/003_2026-08-20.jpg" alt="" loading="lazy"><span class="news-date">2026.08.20</span><span class="news-title">Harbin Institute of Technology 국제 공동 세미나 및 글로벌 네트워크 구축</span></a>
+        </div>
       </div>
     </section>
 
     <section class="section-wrap publication-preview">
       <div class="section-heading">
-        <div><p class="eyebrow">SELECTED WORK</p><h2>Recent Publications</h2></div>
+        <div><div class="section-kicker"><span>04</span><span>SELECTED WORK</span></div><h2>Recent Publications</h2></div>
         <a class="arrow-link" href="publications.html">논문 전체 보기 <span aria-hidden="true">↗</span></a>
       </div>
       <div class="publication-item">
@@ -95,7 +96,7 @@
     </section>
 
     <section class="section-wrap original-mission">
-      <div class="section-kicker"><span>02</span><span>ORIGINAL LAB. PROFILE</span></div>
+      <div class="section-kicker"><span>05</span><span>LAB MISSION</span></div>
       <div>
         <p class="eyebrow">WELCOME TO TES LAB. AT KONGJU NATIONAL UNIVERSITY</p>
         <h2>The ultimate goal of TES Lab. is to design “Thermal Energy Solutions” for humanity.</h2>
@@ -105,9 +106,9 @@
 
     <section class="join-band">
       <div class="section-wrap join-inner">
-        <p class="eyebrow">WORK WITH US</p><h2>열에너지의 다음 해법을<br>함께 연구할 동료를 기다립니다.</h2>
+        <div class="section-kicker"><span>06</span><span>WORK WITH US</span></div><h2>열에너지의 다음 해법을<br>함께 연구할 동료를 기다립니다.</h2>
         <p>열공학에 대한 열정을 가진 분이라면 누구나 연구실에 참여할 수 있습니다.</p>
-        <a class="button button-light" href="contact.html">김중배 교수님께 문의하기 <span aria-hidden="true">↗</span></a>
+        <a class="button button-light" href="contact.html">TES Lab. 문의하기 <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   </main>

@@ -100,7 +100,7 @@ B. 텍스트 정보 요청
 
 [9] 학생 영문 이름 표기 통일
   - People 페이지: "Bumsu Kim" / Open Courses 페이지: "Beomsu Kim"
-  -> 사용할 표기:
+  -> 사용할 표기: Bumsu Kim (2026-11-07 반영)
 
 [10] People 페이지 비어 있는 연구 관심사
   - Yongsik Ham (Ph.D. Course): 원래 사이트에도 "Research Interest: Keyword"로 되어 있습니다.

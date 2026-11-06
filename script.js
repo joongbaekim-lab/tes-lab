@@ -22,44 +22,95 @@ if (menuButton && navigation) {
   });
 }
 
-// Match each current news item to its original dated photograph.
-const newsPhotoSources = new Map([
-  ["assets/news/news-2026-09-14", "News/001_2026-09-14.png"],
-  ["assets/news/news-2026-08-31", "News/002_2026-08-31.png"],
-  ["assets/news/news-2026-08-20-a", "News/003_2026-08-20.png"],
-  ["assets/news/news-2026-08-20-b", "News/004_2026-08-20.png"],
-  ["assets/news/news-2026-07-09", "News/007_2026-07-09.jpg"],
-  ["assets/news/news-2026-07-02", "News/009_2026-07-02.jpg"],
-  ["assets/news/news-2026-06-19", "News/014_2026-06-19.png"],
-  ["assets/news/news-2026-06-27", "News/012_2026-06-27.png"],
-  ["assets/news/news-2026-05-28", "News/016_2026-05-28.png"],
-  ["assets/news/news-2026-05-27", "News/018_2026-05-27.png"],
-  ["assets/news/news-2026-05-26", "News/019_2026-05-26.png"],
-  ["assets/news/news-2026-04-29", "News/026_2026-04-29.png"],
-  ["assets/news/news-2026-04-28", "News/029_2026-04-28.png"],
-  ["assets/news/news-2026-04-22", "News/033_2026-04-22.png"],
-  ["assets/news/news-2026-04-23", "News/031_2026-04-23.png"],
-  ["assets/news/news-2026-01-15", "News/036_2026-01-15.png"],
-  ["assets/news/news-2026-01-02", "News/039_2026-01-02.png"]
-]);
-
-// Use a mapped original photo when available, otherwise keep the legacy extension fallback.
-document.querySelectorAll(".news-art[data-photo]").forEach((box) => {
-  const base = box.dataset.photo;
-  const source = newsPhotoSources.get(base);
-  const exts = [".jpg", ".png", ".jpeg", ".webp"];
-  const img = new Image();
-  img.className = "news-photo news-real";
-  img.alt = box.closest(".news-row")?.querySelector("h3")?.textContent.trim() || "";
-  img.loading = "lazy";
-  let i = 0;
-  img.onerror = () => {
-    if (!source && ++i < exts.length) img.src = base + exts[i];
-    else img.remove();
+// Home splash: big lab logo first; scroll / swipe / tap / key enters the site.
+const splash = document.getElementById("splash");
+const root = document.documentElement;
+if (splash && !root.classList.contains("splash-seen")) {
+  const shownAt = performance.now();
+  let entered = false;
+  const enter = () => {
+    if (entered || performance.now() - shownAt < 450) return;
+    entered = true;
+    try { sessionStorage.setItem("tes-splash-seen", "1"); } catch (e) { /* storage unavailable */ }
+    window.scrollTo(0, 0);
+    splash.classList.add("is-leaving");
+    root.classList.remove("splash-lock");
+    events.forEach(([type, handler]) => window.removeEventListener(type, handler));
+    setTimeout(() => { splash.remove(); }, 750);
   };
-  img.onload = () => box.classList.add("has-photo");
-  box.prepend(img);
-  img.src = source || base + exts[0];
+  let touchY = null;
+  const events = [
+    ["wheel", (e) => { if (Math.abs(e.deltaY) > 2) enter(); }],
+    ["touchstart", (e) => { touchY = e.touches[0]?.clientY ?? null; }],
+    ["touchmove", (e) => { if (touchY !== null && Math.abs((e.touches[0]?.clientY ?? touchY) - touchY) > 12) enter(); }],
+    ["keydown", (e) => { if (["ArrowDown", "PageDown", " ", "Enter", "Escape"].includes(e.key)) { e.preventDefault(); enter(); } }]
+  ];
+  events.forEach(([type, handler]) => window.addEventListener(type, handler, { passive: type !== "keydown" }));
+  splash.addEventListener("click", enter);
+} else if (splash) {
+  splash.remove();
+}
+
+// News photo viewer: click a photo to see the full set for that news item.
+const galleryLinks = document.querySelectorAll("[data-gallery]");
+if (galleryLinks.length) {
+  const box = document.createElement("div");
+  box.className = "lightbox";
+  box.hidden = true;
+  box.innerHTML = '<button class="lightbox-close" type="button" aria-label="닫기">×</button><button class="lightbox-prev" type="button" aria-label="이전 사진">‹</button><figure><img alt=""><figcaption></figcaption></figure><button class="lightbox-next" type="button" aria-label="다음 사진">›</button>';
+  document.body.append(box);
+  const img = box.querySelector("img");
+  const caption = box.querySelector("figcaption");
+  let set = [];
+  let index = 0;
+  let title = "";
+  const show = () => {
+    img.src = set[index];
+    caption.textContent = set.length > 1 ? `${title}  (${index + 1} / ${set.length})` : title;
+    box.querySelector(".lightbox-prev").hidden = set.length < 2;
+    box.querySelector(".lightbox-next").hidden = set.length < 2;
+  };
+  const close = () => { box.hidden = true; img.removeAttribute("src"); document.documentElement.classList.remove("lightbox-open"); };
+  const step = (delta) => { index = (index + delta + set.length) % set.length; show(); };
+  galleryLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const group = link.dataset.gallery;
+      const row = link.closest(".news-row");
+      const links = row ? [row.querySelector(".news-art"), ...row.querySelectorAll(".news-thumbs a")] : [...document.querySelectorAll(`[data-gallery="${group}"]`)];
+      set = links.map((item) => item.getAttribute("href"));
+      index = Math.max(0, set.indexOf(link.getAttribute("href")));
+      title = row?.querySelector("h3")?.textContent.trim() || "";
+      box.hidden = false;
+      document.documentElement.classList.add("lightbox-open");
+      show();
+    });
+  });
+  box.querySelector(".lightbox-close").addEventListener("click", close);
+  box.querySelector(".lightbox-prev").addEventListener("click", () => step(-1));
+  box.querySelector(".lightbox-next").addEventListener("click", () => step(1));
+  box.addEventListener("click", (event) => { if (event.target === box) close(); });
+  document.addEventListener("keydown", (event) => {
+    if (box.hidden) return;
+    if (event.key === "Escape") close();
+    if (event.key === "ArrowLeft") step(-1);
+    if (event.key === "ArrowRight") step(1);
+  });
+}
+
+// Open Courses: show the video thumbnail first, play in place on click (opens YouTube when viewed as a local file).
+document.querySelectorAll(".video-facade[data-video]").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    if (location.protocol === "file:") return;
+    event.preventDefault();
+    const frame = document.createElement("iframe");
+    frame.src = `https://www.youtube-nocookie.com/embed/${link.dataset.video}?autoplay=1&rel=0`;
+    frame.title = link.getAttribute("aria-label") || "YouTube video";
+    frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    frame.allowFullscreen = true;
+    frame.className = "video-frame";
+    link.replaceWith(frame);
+  });
 });
 
 const journalMetricsByYear = new Map([
@@ -100,3 +151,92 @@ document.querySelectorAll(".publication-full").forEach((publication) => {
   const originalLink = publication.querySelector("a");
   if (originalLink) publication.insertBefore(metrics, originalLink);
 });
+
+// KOR / ENG switch: swaps Korean text for English using window.TES_EN (assets/i18n-en.js).
+(() => {
+  const dict = window.TES_EN || {};
+  const header = document.querySelector(".site-header");
+  if (!header) return;
+  const ATTRS = ["alt", "aria-label", "title"];
+  const original = new Map();
+  const norm = (text) => text.replace(/\s+/g, " ").trim();
+  const textNodes = () => {
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+      acceptNode: (node) => (node.parentElement?.closest("script, style, svg, noscript") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT)
+    });
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    return nodes;
+  };
+  const apply = (lang) => {
+    if (lang === "en") {
+      textNodes().forEach((node) => {
+        const key = norm(node.nodeValue);
+        if (!key || !dict[key]) return;
+        if (!original.has(node)) original.set(node, node.nodeValue);
+        const lead = node.nodeValue.match(/^\s*/)[0];
+        const tail = node.nodeValue.match(/\s*$/)[0];
+        node.nodeValue = lead + dict[key] + tail;
+      });
+      document.querySelectorAll(ATTRS.map((a) => `[${a}]`).join(",")).forEach((el) => {
+        ATTRS.forEach((attr) => {
+          const value = el.getAttribute(attr);
+          const key = value && norm(value);
+          if (!key || !dict[key]) return;
+          const store = `data-ko-${attr}`;
+          if (!el.hasAttribute(store)) el.setAttribute(store, value);
+          el.setAttribute(attr, dict[key]);
+        });
+      });
+    } else {
+      original.forEach((value, node) => { node.nodeValue = value; });
+      original.clear();
+      ATTRS.forEach((attr) => {
+        document.querySelectorAll(`[data-ko-${attr}]`).forEach((el) => {
+          el.setAttribute(attr, el.getAttribute(`data-ko-${attr}`));
+          el.removeAttribute(`data-ko-${attr}`);
+        });
+      });
+    }
+    document.documentElement.lang = lang === "en" ? "en" : "ko";
+    document.documentElement.classList.toggle("lang-en", lang === "en");
+    switcher.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+  };
+  const switcher = document.createElement("div");
+  switcher.className = "lang-switch";
+  switcher.setAttribute("role", "group");
+  switcher.setAttribute("aria-label", "Language");
+  switcher.innerHTML = '<button type="button" data-lang="ko">KOR</button><button type="button" data-lang="en">ENG</button>';
+  header.insertBefore(switcher, header.querySelector(".menu-toggle"));
+  let current = "ko";
+  try { current = localStorage.getItem("tes-lang") === "en" ? "en" : "ko"; } catch (e) { /* storage unavailable */ }
+  switcher.addEventListener("click", (event) => {
+    const button = event.target.closest("button[data-lang]");
+    if (!button || button.dataset.lang === current) return;
+    if (current === "en") apply("ko");
+    current = button.dataset.lang;
+    try { localStorage.setItem("tes-lang", current); } catch (e) { /* storage unavailable */ }
+    apply(current);
+  });
+  apply(current);
+})();
+
+// Achievements: count the numbers up once when they appear.
+(() => {
+  const nums = document.querySelectorAll(".stat-num[data-count]");
+  if (!nums.length || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const run = (el) => {
+    const target = Number(el.dataset.count) || 0;
+    const start = performance.now();
+    const tick = (now) => {
+      const p = Math.min(1, (now - start) / 900);
+      el.textContent = String(Math.round(target * (1 - Math.pow(1 - p, 3))));
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((entries) => entries.forEach((e) => { if (e.isIntersecting) { run(e.target); io.unobserve(e.target); } }), { threshold: .4 });
+    nums.forEach((n) => io.observe(n));
+  } else nums.forEach(run);
+})();
