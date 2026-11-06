@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Roboto, 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', Arial, sans-serif">
+  <title>Thermal image processing and deep-learning defect detection pipeline</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c1512"/><stop offset="1" stop-color="#132520"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#9fc3b6" stroke-opacity=".05"/></pattern>
+    <radialGradient id="th" cx=".55" cy=".5" r=".7"><stop offset="0" stop-color="#fbb61a"/><stop offset=".25" stop-color="#ed6925"/><stop offset=".55" stop-color="#bc3754"/><stop offset=".85" stop-color="#781c6d"/><stop offset="1" stop-color="#320a5e"/></radialGradient>
+    <radialGradient id="th2" cx=".5" cy=".5" r=".7"><stop offset="0" stop-color="#bc3754"/><stop offset=".6" stop-color="#781c6d"/><stop offset="1" stop-color="#320a5e"/></radialGradient>
+    <radialGradient id="amp" cx=".5" cy=".5" r=".6"><stop offset="0" stop-color="#e8a24a"/><stop offset=".6" stop-color="#7a4a2a"/><stop offset="1" stop-color="#2a1d16"/></radialGradient>
+    <linearGradient id="pkg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a535a"/><stop offset="1" stop-color="#262c30"/></linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="6"/></filter>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#d98b65"/></marker>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/><rect width="1200" height="675" fill="url(#grid)"/>
+  <text x="48" y="56" fill="#d98b65" font-size="15" font-weight="700" letter-spacing="3">01-B · INFRARED THERMOGRAPHY</text>
+  <text x="48" y="92" fill="#eef3ef" font-size="29" font-weight="600">Deep Learning–based Thermal Image Processing</text>
+
+  <!-- cards -->
+  <g fill="#111d19" stroke="#2d3f38">
+    <rect x="48" y="128" width="249" height="372" rx="16"/>
+    <rect x="333" y="128" width="249" height="372" rx="16"/>
+    <rect x="618" y="128" width="249" height="372" rx="16"/>
+    <rect x="903" y="128" width="249" height="372" rx="16"/>
+  </g>
+  <g font-size="14" font-weight="700" fill="#d98b65" letter-spacing="2">
+    <text x="72" y="162">STEP 1</text><text x="357" y="162">STEP 2</text><text x="642" y="162">STEP 3</text><text x="927" y="162">STEP 4</text>
+  </g>
+  <g font-size="20" font-weight="600" fill="#eef3ef">
+    <text x="72" y="190">Thermal sequence</text><text x="357" y="190">Signal processing</text><text x="642" y="190">Deep learning</text><text x="927" y="190">Defect detection</text>
+  </g>
+  <g fill="none" stroke="#d98b65" stroke-width="3" marker-end="url(#arr)">
+    <path d="M302 318H328"/><path d="M587 318H613"/><path d="M872 318H898"/>
+  </g>
+
+  <!-- step 1: frame stack -->
+  <g stroke="#0c1512" stroke-width="2">
+    <rect x="126" y="222" width="150" height="112" rx="6" fill="url(#th2)" opacity=".55"/>
+    <rect x="110" y="238" width="150" height="112" rx="6" fill="url(#th2)" opacity=".7"/>
+    <rect x="94" y="254" width="150" height="112" rx="6" fill="url(#th2)" opacity=".85"/>
+    <rect x="78" y="270" width="150" height="112" rx="6" fill="url(#th)"/>
+  </g>
+  <path d="M146 286l9 22-7 18 11 20-5 22" fill="none" stroke="#fcffa4" stroke-width="3" stroke-linejoin="round"/>
+  <text x="84" y="404" fill="#c4d3cc" font-size="15">t₁</text>
+  <text x="268" y="214" fill="#c4d3cc" font-size="15" text-anchor="end">tₙ</text>
+  <text x="72" y="446" fill="#d7e3dd" font-size="16">Raw IR frames</text>
+  <text x="72" y="470" fill="#93a59c" font-size="14">pulsed / lock-in excitation</text>
+
+  <!-- step 2: lock-in -->
+  <path d="M360 238q24-34 48 0t48 0t48 0t48 0" fill="none" stroke="#ffd166" stroke-width="3"/>
+  <g fill="#ffd166"><circle cx="372" cy="225" r="4"/><circle cx="420" cy="251" r="4"/><circle cx="468" cy="225" r="4"/><circle cx="516" cy="251" r="4"/></g>
+  <text x="458" y="282" fill="#93a59c" font-size="13" text-anchor="middle">FFT at lock-in frequency</text>
+  <rect x="358" y="296" width="92" height="92" rx="6" fill="url(#amp)"/>
+  <rect x="466" y="296" width="92" height="92" rx="6" fill="#1a1d3a"/>
+  <rect x="478" y="308" width="68" height="68" rx="3" fill="#2f3570"/>
+  <path d="M506 308l7 16-5 13 8 14-4 25" fill="none" stroke="#7ef0ff" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M506 308l7 16-5 13 8 14-4 25" fill="none" stroke="#7ef0ff" stroke-width="8" opacity=".35" filter="url(#glow)"/>
+  <text x="404" y="408" fill="#c4d3cc" font-size="14" text-anchor="middle">Amplitude</text>
+  <text x="512" y="408" fill="#c4d3cc" font-size="14" text-anchor="middle">Phase</text>
+  <text x="357" y="446" fill="#d7e3dd" font-size="16">Phase contrast ↑</text>
+  <text x="357" y="470" fill="#93a59c" font-size="14">noise suppression · depth info</text>
+
+  <!-- step 3: U-Net -->
+  <path d="M657 237C690 196 800 196 833 237" fill="none" stroke="#5f7a71" stroke-width="2" stroke-dasharray="5 5"/>
+  <path d="M697 252C720 226 770 226 793 252" fill="none" stroke="#5f7a71" stroke-width="2" stroke-dasharray="5 5"/>
+  <g stroke="#0c1512" stroke-width="1">
+    <rect x="648" y="245" width="18" height="150" fill="#5e9aff"/><polygon points="648,245 662,235 680,235 666,245" fill="#9cc0ff"/><polygon points="666,245 680,235 680,385 666,395" fill="#3f6fc4"/>
+    <rect x="688" y="260" width="18" height="120" fill="#4fb8e8"/><polygon points="688,260 702,250 720,250 706,260" fill="#93dcf5"/><polygon points="706,260 720,250 720,370 706,380" fill="#2f86b0"/>
+    <rect x="728" y="275" width="18" height="90" fill="#2fc77a"/><polygon points="728,275 742,265 760,265 746,275" fill="#8fe8b9"/><polygon points="746,275 760,265 760,355 746,365" fill="#1f8f57"/>
+    <rect x="768" y="260" width="18" height="120" fill="#f0b03c"/><polygon points="768,260 782,250 800,250 786,260" fill="#ffd98a"/><polygon points="786,260 800,250 800,370 786,380" fill="#b37d1e"/>
+    <rect x="808" y="245" width="18" height="150" fill="#ff7a5c"/><polygon points="808,245 822,235 840,235 826,245" fill="#ffb3a1"/><polygon points="826,245 840,235 840,385 826,395" fill="#c4513a"/>
+  </g>
+  <text x="744" y="420" fill="#c4d3cc" font-size="14" text-anchor="middle">encoder  →  decoder</text>
+  <text x="642" y="446" fill="#d7e3dd" font-size="16">CNN segmentation</text>
+  <text x="642" y="470" fill="#93a59c" font-size="14">trained on labeled defects</text>
+
+  <!-- step 4: result -->
+  <rect x="928" y="230" width="200" height="155" rx="6" fill="url(#pkg)" stroke="#5a656b"/>
+  <g stroke="#5a656b" stroke-opacity=".6"><path d="M995 230v155M1062 230v155M928 307h200"/></g>
+  <path d="M966 246l9 22-7 18 11 22-5 24" fill="none" stroke="#ff7a6e" stroke-width="3" stroke-linejoin="round"/>
+  <ellipse cx="1088" cy="340" rx="18" ry="11" fill="#ffd166" opacity=".6"/>
+  <rect x="948" y="240" width="50" height="104" fill="none" stroke="#ff5a4f" stroke-width="2.5"/>
+  <rect x="948" y="222" width="86" height="20" fill="#ff5a4f"/>
+  <text x="954" y="237" fill="#2a0905" font-size="13" font-weight="800">Crack 0.97</text>
+  <rect x="1060" y="320" width="56" height="40" fill="none" stroke="#ffd166" stroke-width="2.5"/>
+  <rect x="1046" y="362" width="78" height="20" fill="#ffd166"/>
+  <text x="1052" y="377" fill="#2a2105" font-size="13" font-weight="800">Void 0.91</text>
+  <text x="927" y="446" fill="#d7e3dd" font-size="16">Localization &amp; class</text>
+  <text x="927" y="470" fill="#93a59c" font-size="14">EMC crack · void · delamination</text>
+
+  <!-- bottom strip -->
+  <rect x="48" y="528" width="1104" height="104" rx="16" fill="#0f1a17" stroke="#2d3f38"/>
+  <g>
+    <circle cx="96" cy="580" r="20" fill="none" stroke="#4fd1e8" stroke-width="2.5"/><path d="M86 580h20M96 570v20" stroke="#4fd1e8" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="130" y="574" fill="#eef3ef" font-size="18" font-weight="600">Non-contact</text>
+    <text x="130" y="600" fill="#93a59c" font-size="15">적외선 복사 기반 온도 측정</text>
+    <circle cx="464" cy="580" r="20" fill="none" stroke="#2fc77a" stroke-width="2.5"/><path d="M455 580l6 7 12-14" fill="none" stroke="#2fc77a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="498" y="574" fill="#eef3ef" font-size="18" font-weight="600">Non-destructive</text>
+    <text x="498" y="600" fill="#93a59c" font-size="15">패키지 표면 · 내부 결함 검출</text>
+    <circle cx="832" cy="580" r="20" fill="none" stroke="#ffd166" stroke-width="2.5"/><path d="M836 566l-10 16h10l-4 13" fill="none" stroke="#ffd166" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="866" y="574" fill="#eef3ef" font-size="18" font-weight="600">High-speed · High-accuracy</text>
+    <text x="866" y="600" fill="#93a59c" font-size="15">딥러닝 영상처리 자동 판정</text>
+  </g>
+</svg>

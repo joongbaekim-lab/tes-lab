@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Infrared thermography inspection workflow</title>
+  <desc id="desc">Pulsed heating, infrared sensing, and thermal mapping reveal hidden cracks in a semiconductor package without contact.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#182721"/><stop offset="1" stop-color="#101714"/></linearGradient>
+    <linearGradient id="heat" x2="0" y2="1"><stop stop-color="#f6ad72"/><stop offset="1" stop-color="#e26f53"/></linearGradient>
+    <linearGradient id="thermal" x2="1" y2="0"><stop stop-color="#183dff"/><stop offset=".2" stop-color="#00b8ff"/><stop offset=".42" stop-color="#33d17a"/><stop offset=".62" stop-color="#e7ed36"/><stop offset=".82" stop-color="#ff922e"/><stop offset="1" stop-color="#f33232"/></linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#719080" stroke-opacity=".09"/></pattern>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 8 4 0 8" fill="none" stroke="#7ed6c4" stroke-width="1.5"/></marker>
+  </defs>
+  <rect width="1200" height="600" rx="22" fill="url(#bg)"/>
+  <rect width="1200" height="600" rx="22" fill="url(#grid)"/>
+  <text x="54" y="58" fill="#eaf0e9" font-family="Roboto, sans-serif" font-size="16" font-weight="700" letter-spacing="3">NON-DESTRUCTIVE THERMAL INSPECTION</text>
+  <text x="54" y="88" fill="#93a89d" font-family="Roboto, sans-serif" font-size="13" letter-spacing="1.5">PULSED HEATING  /  INFRARED SENSING  /  DEFECT MAPPING</text>
+  <path d="M386 302h92M744 302h90" fill="none" stroke="#79cbb8" stroke-opacity=".7" stroke-width="2" marker-end="url(#arrow)"/>
+  <g transform="translate(55 142)">
+    <rect width="315" height="324" rx="18" fill="#1b2b24" stroke="#385346"/>
+    <text x="22" y="38" fill="#77d0bd" font-family="Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="2">01 / HEAT &amp; EXCITE</text>
+    <rect x="66" y="70" width="184" height="103" rx="12" fill="#233a30" stroke="#668b75"/>
+    <path d="M92 124h132l-14-26h-104z" fill="#18241f" stroke="#7b9988" stroke-width="2"/>
+    <circle cx="158" cy="111" r="26" fill="#101714" stroke="#e59669" stroke-width="3"/>
+    <circle cx="158" cy="111" r="12" fill="#e59669" fill-opacity=".26" stroke="#f2b478"/>
+    <path d="M158 145v42m-30-37 16 32m44-32-16 32" stroke="#f2a66f" stroke-width="3" stroke-linecap="round"/>
+    <path d="M111 194h94l20 23H91z" fill="#2c4738" stroke="#85a58d" stroke-width="2"/>
+    <rect x="90" y="220" width="138" height="16" rx="5" fill="#4a6251"/>
+    <path d="M120 226h18m12 0h18m12 0h18" stroke="#ef9a6b" stroke-width="3" stroke-linecap="round"/>
+    <text x="157" y="274" text-anchor="middle" fill="#dbe4dc" font-family="Roboto, sans-serif" font-size="13" font-weight="600">Pulsed heat input</text>
+    <text x="157" y="297" text-anchor="middle" fill="#91a69a" font-family="Roboto, sans-serif" font-size="11">Transient surface response</text>
+  </g>
+  <g transform="translate(443 142)">
+    <rect width="315" height="324" rx="18" fill="#1b2b24" stroke="#385346"/>
+    <text x="22" y="38" fill="#77d0bd" font-family="Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="2">02 / MEASURE</text>
+    <path d="M113 78h90l28 22v31h-146v-31z" fill="#263c32" stroke="#759985" stroke-width="2"/>
+    <circle cx="158" cy="114" r="21" fill="#101714" stroke="#77d0bd" stroke-width="3"/>
+    <circle cx="158" cy="114" r="10" fill="#77d0bd" fill-opacity=".22"/>
+    <path d="M141 136 116 184m34-43-10 45m29-45 10 43m2-48 24 48" stroke="#7dd9c7" stroke-width="2" stroke-dasharray="4 7" opacity=".8"/>
+    <rect x="50" y="197" width="214" height="34" rx="7" fill="#273c31" stroke="#789282" stroke-width="2"/>
+    <rect x="69" y="185" width="176" height="25" rx="5" fill="#344c3c" stroke="#91aa96"/>
+    <rect x="101" y="170" width="112" height="24" rx="5" fill="#64785b" stroke="#b5ac78"/>
+    <path d="m156 179 8 5-9 8 13 3" fill="none" stroke="#f07e60" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M155 204v28" stroke="#f08a62" stroke-width="2" stroke-dasharray="4 4"/>
+    <text x="157" y="274" text-anchor="middle" fill="#dbe4dc" font-family="Roboto, sans-serif" font-size="13" font-weight="600">Infrared camera</text>
+    <text x="157" y="297" text-anchor="middle" fill="#91a69a" font-family="Roboto, sans-serif" font-size="11">Contact-free thermal signal</text>
+  </g>
+  <g transform="translate(831 142)">
+    <rect width="315" height="324" rx="18" fill="#1b2b24" stroke="#385346"/>
+    <text x="22" y="38" fill="#77d0bd" font-family="Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="2">03 / IDENTIFY</text>
+    <rect x="45" y="72" width="225" height="142" rx="11" fill="#18231e" stroke="#5d7866"/>
+    <path d="M59 177c32-3 40-51 76-47s39 37 63 14 29-19 57-22v76H59z" fill="url(#thermal)" opacity=".92"/>
+    <path d="M59 153c32-3 40-48 76-43s39 36 63 13 29-16 57-19" fill="none" stroke="#fff06a" stroke-width="2"/>
+    <path d="M59 188c32-4 40-37 76-34s39 28 63 12 29-12 57-13" fill="none" stroke="#36e6ff" stroke-width="2"/>
+    <path d="M152 95v107" stroke="#f6aa73" stroke-opacity=".65" stroke-width="1.5" stroke-dasharray="4 5"/>
+    <circle cx="151" cy="145" r="26" fill="none" stroke="#f1b273" stroke-width="1.5"/>
+    <circle cx="151" cy="145" r="35" fill="none" stroke="#f1b273" stroke-opacity=".35"/>
+    <rect x="72" y="231" width="170" height="9" rx="4" fill="url(#thermal)"/>
+    <text x="157" y="274" text-anchor="middle" fill="#dbe4dc" font-family="Roboto, sans-serif" font-size="13" font-weight="600">Thermal anomaly map</text>
+    <text x="157" y="297" text-anchor="middle" fill="#91a69a" font-family="Roboto, sans-serif" font-size="11">Hidden crack indication</text>
+  </g>
+  <text x="1147" y="550" text-anchor="end" fill="#718579" font-family="Roboto, sans-serif" font-size="10" letter-spacing="1.5">THERMAL ENERGY SOLUTIONS LAB.</text>
+</svg>

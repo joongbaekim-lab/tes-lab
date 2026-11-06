@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Roboto, 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', Arial, sans-serif">
+  <title>24-hour thermoelectric generation with solar reflector, super-black absorber and radiative cooling</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c1512"/><stop offset="1" stop-color="#132520"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#9fc3b6" stroke-opacity=".05"/></pattern>
+    <linearGradient id="day" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f3a52"/><stop offset="1" stop-color="#14262a"/></linearGradient>
+    <linearGradient id="night" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#060a1c"/><stop offset="1" stop-color="#101a2a"/></linearGradient>
+    <radialGradient id="sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff4c2"/><stop offset=".6" stop-color="#ffd166"/><stop offset="1" stop-color="#f5a623"/></radialGradient>
+    <linearGradient id="mirror" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8fa3aa"/><stop offset=".5" stop-color="#f2f7f8"/><stop offset="1" stop-color="#8fa3aa"/></linearGradient>
+    <linearGradient id="pw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2fc77a" stop-opacity=".5"/><stop offset="1" stop-color="#2fc77a" stop-opacity=".02"/></linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="9"/></filter>
+    <marker id="ay" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ffd166"/></marker>
+    <marker id="ao" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#ff9f6e"/></marker>
+    <g id="teg">
+      <rect x="0" y="12" width="160" height="10" rx="2" fill="#e9e2d6"/>
+      <g fill="#d98b65"><rect x="8" y="22" width="36" height="5"/><rect x="58" y="22" width="36" height="5"/><rect x="108" y="22" width="36" height="5"/><rect x="33" y="57" width="36" height="5"/><rect x="83" y="57" width="36" height="5"/></g>
+      <g><rect x="10" y="27" width="14" height="30" fill="#ff7a5c"/><rect x="35" y="27" width="14" height="30" fill="#5e9aff"/><rect x="60" y="27" width="14" height="30" fill="#ff7a5c"/><rect x="85" y="27" width="14" height="30" fill="#5e9aff"/><rect x="110" y="27" width="14" height="30" fill="#ff7a5c"/><rect x="135" y="27" width="14" height="30" fill="#5e9aff"/></g>
+      <rect x="0" y="62" width="160" height="10" rx="2" fill="#e9e2d6"/>
+      <rect x="4" y="72" width="152" height="8" fill="#4a5d56"/>
+      <g fill="#3a4a45"><rect x="8" y="80" width="6" height="26"/><rect x="24" y="80" width="6" height="26"/><rect x="40" y="80" width="6" height="26"/><rect x="56" y="80" width="6" height="26"/><rect x="72" y="80" width="6" height="26"/><rect x="88" y="80" width="6" height="26"/><rect x="104" y="80" width="6" height="26"/><rect x="120" y="80" width="6" height="26"/><rect x="136" y="80" width="6" height="26"/><rect x="146" y="80" width="6" height="26"/></g>
+    </g>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/><rect width="1200" height="675" fill="url(#grid)"/>
+  <text x="48" y="56" fill="#d98b65" font-size="15" font-weight="700" letter-spacing="3">02-B · ECO-FRIENDLY &amp; RENEWABLE ENERGY</text>
+  <text x="48" y="92" fill="#eef3ef" font-size="29" font-weight="600">24/7 Thermoelectric Power Generation</text>
+
+  <!-- DAY -->
+  <rect x="48" y="120" width="540" height="282" rx="16" fill="url(#day)" stroke="#2d3f38"/>
+  <text x="72" y="152" fill="#ffd98a" font-size="15" font-weight="700" letter-spacing="2">DAY</text>
+  <text x="72" y="176" fill="#93a59c" font-size="14">solar-thermal ΔT</text>
+  <circle cx="318" cy="170" r="40" fill="#ffd166" opacity=".35" filter="url(#glow)"/>
+  <circle cx="318" cy="170" r="24" fill="url(#sun)"/>
+  <path d="M238 283L160 205" stroke="url(#mirror)" stroke-width="7" stroke-linecap="round"/>
+  <path d="M398 283L476 205" stroke="url(#mirror)" stroke-width="7" stroke-linecap="round"/>
+  <g fill="none" stroke="#ffd166" stroke-width="2.5">
+    <path d="M318 198V268" marker-end="url(#ay)"/>
+    <path d="M300 190L190 232"/><path d="M190 232L266 270" marker-end="url(#ay)"/>
+    <path d="M336 190L446 232"/><path d="M446 232L370 270" marker-end="url(#ay)"/>
+  </g>
+  <use href="#teg" x="238" y="266"/>
+  <rect x="238" y="266" width="160" height="12" rx="2" fill="#050607" stroke="#3a3f42"/>
+  <g stroke="#6d847b" stroke-width="1.5"><path d="M400 272H420"/><path d="M400 310H420"/><path d="M400 360H420"/></g>
+  <text x="426" y="277" fill="#d7e3dd" font-size="15">Super-black absorber</text>
+  <text x="426" y="315" fill="#d7e3dd" font-size="15">TEG · p/n legs</text>
+  <text x="426" y="365" fill="#d7e3dd" font-size="15">Heat sink</text>
+  <text x="72" y="300" fill="#d7e3dd" font-size="15">Angle-independent</text>
+  <text x="72" y="320" fill="#d7e3dd" font-size="15">solar reflector</text>
+
+  <!-- NIGHT -->
+  <rect x="612" y="120" width="540" height="282" rx="16" fill="url(#night)" stroke="#2d3f38"/>
+  <text x="636" y="152" fill="#8fe3ee" font-size="15" font-weight="700" letter-spacing="2">NIGHT</text>
+  <text x="636" y="176" fill="#93a59c" font-size="14">radiative-cooling ΔT</text>
+  <g fill="#ffffff"><circle cx="760" cy="150" r="1.5"/><circle cx="830" cy="185" r="1.2"/><circle cx="960" cy="140" r="1.5"/><circle cx="1010" cy="200" r="1"/><circle cx="1110" cy="240" r="1.3"/><circle cx="700" cy="215" r="1"/></g>
+  <path d="M1106 150a26 26 0 1 0 22 40a21 21 0 1 1-22-40z" fill="#e8eef0"/>
+  <path d="M802 283L724 205" stroke="url(#mirror)" stroke-width="7" stroke-linecap="round" opacity=".35"/>
+  <path d="M962 283L1040 205" stroke="url(#mirror)" stroke-width="7" stroke-linecap="round" opacity=".35"/>
+  <use href="#teg" x="802" y="266"/>
+  <rect x="802" y="266" width="160" height="12" rx="2" fill="#eef4f5"/>
+  <g fill="none" stroke="#4fd1e8" stroke-width="2.5" stroke-linecap="round">
+    <path d="M842 262c-7-10 7-16 0-26s7-16 0-26s5-10 0-16"/>
+    <path d="M882 262c-7-10 7-16 0-26s7-16 0-26s5-10 0-16"/>
+    <path d="M922 262c-7-10 7-16 0-26s7-16 0-26s5-10 0-16"/>
+  </g>
+  <g fill="#4fd1e8"><polygon points="835,200 842,186 849,200"/><polygon points="875,200 882,186 889,200"/><polygon points="915,200 922,186 929,200"/></g>
+  <g fill="none" stroke="#ff9f6e" stroke-width="2.5" marker-end="url(#ao)"><path d="M850 398V378"/><path d="M914 398V378"/></g>
+  <g stroke="#6d847b" stroke-width="1.5"><path d="M964 272H984"/><path d="M964 310H984"/><path d="M964 360H984"/></g>
+  <text x="990" y="277" fill="#d7e3dd" font-size="15">Radiative cooler</text>
+  <text x="990" y="315" fill="#d7e3dd" font-size="15">TEG · reversed ΔT</text>
+  <text x="990" y="365" fill="#d7e3dd" font-size="15">Ambient heat</text>
+  <text x="882" y="178" fill="#8fe3ee" font-size="14" text-anchor="middle">IR → night sky</text>
+
+  <!-- 24 h chart -->
+  <rect x="48" y="422" width="1104" height="213" rx="16" fill="#0f1a17" stroke="#2d3f38"/>
+  <text x="72" y="455" fill="#eef3ef" font-size="17" font-weight="600">Power output over 24 hours</text>
+  <text x="1128" y="455" fill="#93a59c" font-size="14" text-anchor="end">continuous generation · day &amp; night</text>
+  <rect x="110" y="475" width="252" height="125" fill="#5e9aff" opacity=".07"/>
+  <rect x="362" y="475" width="505" height="125" fill="#ffd166" opacity=".06"/>
+  <rect x="867" y="475" width="253" height="125" fill="#5e9aff" opacity=".07"/>
+  <path d="M110 572C250 570 330 568 383 594C430 600 520 485 615 485C710 485 800 600 846 594C880 568 960 570 1120 572V600H110Z" fill="url(#pw)"/>
+  <path d="M110 572C250 570 330 568 383 594C430 600 520 485 615 485C710 485 800 600 846 594C880 568 960 570 1120 572" fill="none" stroke="#2fc77a" stroke-width="3.5"/>
+  <path d="M110 475V600H1120" fill="none" stroke="#4a5d56" stroke-width="2"/>
+  <g fill="#93a59c" font-size="13" text-anchor="middle"><text x="110" y="620">0 h</text><text x="362" y="620">6</text><text x="615" y="620">12</text><text x="867" y="620">18</text><text x="1120" y="620">24 h</text></g>
+  <text x="100" y="488" fill="#93a59c" font-size="13" text-anchor="end">P</text>
+  <circle cx="530" cy="510" r="10" fill="url(#sun)"/>
+  <text x="548" y="515" fill="#ffd98a" font-size="14">solar-driven</text>
+  <path d="M228 500a10 10 0 1 0 9 15a8 8 0 1 1-9-15z" fill="#e8eef0"/>
+  <text x="246" y="515" fill="#8fe3ee" font-size="14">radiative cooling</text>
+  <path d="M980 500a10 10 0 1 0 9 15a8 8 0 1 1-9-15z" fill="#e8eef0"/>
+  <text x="998" y="515" fill="#8fe3ee" font-size="14">radiative cooling</text>
+</svg>

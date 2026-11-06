@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Sustainable energy and radiative cooling</title>
+  <desc id="desc">Solar energy, radiative cooling, and a thermoelectric device combine to produce electricity through day and night.</desc>
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#182a27"/><stop offset="1" stop-color="#101714"/></linearGradient>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#254b47"/><stop offset="1" stop-color="#1b302c"/></linearGradient>
+    <linearGradient id="sun" x2="0" y2="1"><stop stop-color="#f5c27b"/><stop offset="1" stop-color="#e58a62"/></linearGradient>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 8 4 0 8" fill="none" stroke="#e8aa73" stroke-width="1.5"/></marker>
+    <marker id="coolArrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0 8 4 0 8" fill="none" stroke="#7be0d0" stroke-width="1.5"/></marker>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#8ab7a5" stroke-opacity=".08"/></pattern>
+  </defs>
+  <rect width="1200" height="600" rx="22" fill="url(#bg)"/>
+  <rect width="1200" height="600" rx="22" fill="url(#grid)"/>
+  <text x="54" y="58" fill="#eaf0e9" font-family="Roboto, sans-serif" font-size="16" font-weight="700" letter-spacing="3">SUSTAINABLE THERMAL ENERGY</text>
+  <text x="54" y="88" fill="#93a89d" font-family="Roboto, sans-serif" font-size="13" letter-spacing="1.5">SOLAR HARVESTING  /  RADIATIVE COOLING  /  24-HOUR GENERATION</text>
+  <rect x="55" y="119" width="1090" height="295" rx="18" fill="url(#sky)" stroke="#37594f"/>
+  <circle cx="188" cy="217" r="41" fill="url(#sun)" opacity=".95"/>
+  <g stroke="#efb474" stroke-width="2" stroke-linecap="round" opacity=".9">
+    <path d="M188 151v-20m0 172v-20m66-66h20m-172 0h20m113-46 15-15m-121 121 15-15m91 0 15 15m-121-121 15 15"/>
+  </g>
+  <text x="188" y="295" text-anchor="middle" fill="#f3c58f" font-family="Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1.2">DAYTIME SUN</text>
+  <path d="M250 241 343 300" fill="none" stroke="#f1ac71" stroke-width="2" stroke-dasharray="6 8" marker-end="url(#arrow)"/>
+  <path d="M270 201 365 274" fill="none" stroke="#f1ac71" stroke-width="2" stroke-dasharray="6 8" marker-end="url(#arrow)"/>
+  <g transform="translate(336 258)">
+    <path d="M0 92 105 0h322l82 92z" fill="#213b33" stroke="#8cae94" stroke-width="2"/>
+    <path d="m42 78 87-61h240l55 61z" fill="#17211d" stroke="#c4b383" stroke-width="2"/>
+    <path d="M147 27h70v48h-70zm86 0h70v48h-70zm86 0h39v48h-39z" fill="#345950" stroke="#70b6a4" stroke-width="1.5"/>
+    <path d="M152 34h58m-58 12h58m-58 12h58m34-24h58m-58 12h58m-58 12h58m34-24h26m-26 12h26m-26 12h26" stroke="#87d4c0" stroke-opacity=".55"/>
+    <rect x="208" y="78" width="92" height="15" rx="4" fill="#e59b69"/>
+    <path d="M227 95v45m25-45v45m25-45v45" stroke="#85d7c4" stroke-width="3"/>
+    <path d="M222 139h66" stroke="#cde3d5" stroke-width="3"/>
+    <text x="258" y="174" text-anchor="middle" fill="#dbe4dc" font-family="Roboto, sans-serif" font-size="12" font-weight="600">THERMOELECTRIC MODULE</text>
+  </g>
+  <g transform="translate(755 158)">
+    <path d="M0 92c30-36 60-36 90 0s60 36 90 0 60-36 90 0" fill="none" stroke="#73dac8" stroke-width="3"/>
+    <path d="M0 119c30-36 60-36 90 0s60 36 90 0 60-36 90 0" fill="none" stroke="#73dac8" stroke-width="2" opacity=".55"/>
+    <path d="M29 43 4 9m74 34-4-48m67 47 17-39m45 41 35-30" stroke="#79dfcf" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="236" cy="53" r="25" fill="#cfeae0" fill-opacity=".08" stroke="#7ccfbd"/>
+    <path d="M236 36v34m-17-17h34m-29-12 24 24m0-24-24 24" stroke="#93e1d3" stroke-opacity=".8"/>
+    <text x="130" y="169" text-anchor="middle" fill="#dbe4dc" font-family="Roboto, sans-serif" font-size="12" font-weight="600">RADIATIVE COOLING TO THE SKY</text>
+    <text x="130" y="191" text-anchor="middle" fill="#97b1a7" font-family="Roboto, sans-serif" font-size="11">Selective infrared emission</text>
+  </g>
+  <path d="M719 349h90" fill="none" stroke="#7dd9c7" stroke-width="2" marker-end="url(#coolArrow)"/>
+  <g transform="translate(55 443)">
+    <rect width="1090" height="93" rx="15" fill="#1a2822" stroke="#354d41"/>
+    <text x="28" y="34" fill="#79d6c3" font-family="Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="2">ENERGY STORAGE &amp; CONTROL</text>
+    <text x="28" y="62" fill="#d7e1d8" font-family="Roboto, sans-serif" font-size="14">Thermal management  ·  Phase-change storage  ·  Reliable power after sunset</text>
+    <g transform="translate(850 23)">
+      <rect width="208" height="44" rx="10" fill="#233a30" stroke="#719783"/>
+      <path d="M19 23h23l9-10 11 20 12-10h20" fill="none" stroke="#e9a76e" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+      <text x="116" y="27" fill="#dfe9df" font-family="Roboto, sans-serif" font-size="10" font-weight="600" letter-spacing="1">LOW-CARBON POWER</text>
+    </g>
+  </g>
+  <text x="1147" y="573" text-anchor="end" fill="#718579" font-family="Roboto, sans-serif" font-size="10" letter-spacing="1.5">THERMAL ENERGY SOLUTIONS LAB.</text>
+</svg>
