@@ -527,6 +527,7 @@ window.TES_EN = {
 "6조 · 삼위일체": "Group 6 · Trinity",
 "공학자의 진로설계 오픈카톡방": "Career Design for Engineers KakaoTalk Open Chat",
 "1주차 강의자료": "Week 1 Lecture Materials",
+"나는 누구인가 발표자료 템플릿": "\"Who Am I\" Presentation Template",
 "3주차 강의자료": "Week 3 Lecture Materials",
 "4주차 강의자료": "Week 4 Lecture Materials",
 "5주차 강의자료": "Week 5 Lecture Materials",
