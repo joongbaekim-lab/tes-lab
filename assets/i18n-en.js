@@ -62,7 +62,7 @@ window.TES_EN = {
 "열에너지의 이해와 응용으로 지속 가능한 에너지와 첨단 제조의 해법을 연구합니다.": "Through understanding and applying thermal energy, we develop solutions for sustainable energy and advanced manufacturing.",
 "연구 분야 보기": "View Research Areas",
 "연구실 문의": "Contact the Lab",
-"Recruiting · 학부연구생 및 대학원생 상시 모집": "Recruiting · Undergraduate researchers and graduate students welcome year-round",
+"Recruiting · 학부연구생 및 대학원생, 박사 후 연구원 모집 중": "Recruiting · Undergraduate researchers, graduate students, and postdoctoral researchers",
 "원천기술부터 응용기술까지,": "From fundamental to applied technologies,",
 "열에너지의 새로운 가능성을 찾습니다.": "we explore new possibilities in thermal energy.",
 "열에너지솔루션 연구실(Thermal Energy Solutions Lab.)은 도전적인 연구를 통해 반도체·에너지·스마트 제조 등 다양한 산업 분야의 혁신을 지향합니다.": "Through challenging research, the Thermal Energy Solutions Lab. pursues innovation across diverse industries such as semiconductors, energy, and smart manufacturing.",
