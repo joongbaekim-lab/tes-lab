@@ -578,5 +578,6 @@ window.TES_EN = {
 "강의노트 Chapter 4": "Lecture Notes Chapter 4",
 "강의노트 Chapter 5": "Lecture Notes Chapter 5",
 "10월 13일 퀴즈 성적표": "Oct. 13 Quiz Scores",
+"중간고사 채점표": "Midterm Exam Scores",
 "숙제 제출 현황": "Homework Submission Status"
 };
